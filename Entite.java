@@ -21,27 +21,38 @@ public class Entite
 	}
 	
 	/**
-	 * Accesseur donnant l'identifiant de l'entité
-	 * @return
+	 * Identifiant d'une entité
+	 * @return l'indentifiant de l'entité
 	 */
 	public int getId()
 	{
 		return identifiant;
 	}
 	
+	/**
+	 * Position en abscisse d'une entité
+	 * @return La position en abscisse de l'entité
+	 */
 	public int getPosAbs()
 	{
 		return posAbs;
 	}
 	
+	/**
+	 * Position en ordonnée d'uneentité
+	 * @return La position en abscisse de l'entité
+	 */
 	public int getPosOrd()
 	{
 		return posOrd;
 	}
 	
+	/**
+	 * Etat de la planete
+	 * @return Un booléen indiquant si la planète est occupée ou non
+	 */
 	public boolean getOccupation()
 	{
 		return estOccupe;
 	}
-
 }
