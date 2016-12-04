@@ -5,33 +5,24 @@ public class Planete extends Entite
 	private int taille;
 	private int population;
 	private boolean possedeConstruction;
-	
-	// Caractéristiques des planètes
-	public static final int PlaneteTailleMin = 10; // taille minimale d'une planète
-	public static final int PlaneteTailleMax = 100; // taille maximale d'une planète
+	private Vaisseau construction;
 	
 	/**
 	 * Constructeur 
 	 * @param taille Taille de la planète
 	 * @param population Population de la planète.
 	 */
-	public Planete (int taille, int population)
+	public Planete (int id,Espece e)
 	{
-		this.taille = taille;
-		this.population = population;
-		possedeConstruction = false;
-	}
-
-	public Planete ()
-	{
+		super(id,e);
 		Random r = new Random();
-		taille = Math.abs(r.nextInt())%90+PlaneteTailleMin+1;
+		taille = Math.abs(r.nextInt())%(Constantes.PlaneteTailleMax-Constantes.PlaneteTailleMin)+Constantes.PlaneteTailleMin+1;
 		population = 0;
 		possedeConstruction = false;
 	}
 	
 	/**
-	 * Méthode
+	 * Augmente la population
 	 * @param tauxNat Taux de natalité de l'espèce à laquelle la planète appartient.
 	 */
 	public void augmentePopulation (int tauxNat)
@@ -40,4 +31,32 @@ public class Planete extends Entite
 		population = Math.min(taille, population*(1+tauxNat));
 	}
 	
+	/**
+	 * Diminue la population
+	 * @param dommage Dommage reçu par un vaisseau
+	 */
+	public void pertePopulation (int dommage)
+	{
+		int nouvPop = population - dommage;
+		if (nouvPop < 0)
+			population = 0;
+		else 
+			population = nouvPop;
+	}
+	
+	/**
+	 * Construction du vaisseau présent sur la planète
+	 */
+	public void Construit()
+	{
+		
+	}
+	
+	public boolean estColonisable()
+	{
+		if (population == 0)
+				return true;
+		else 
+			return false;
+	}
 }

@@ -1,29 +1,40 @@
 
 public class Constantes {
-	// Caractéristiques de la galaxie
+	// Caractï¿½ristiques de la galaxie
 	public static final int Largeur = 20; // largeur de la grille galactique (en nombre de cases)
 	public static final int Hauteur = 15; // hauteur de la grille galactique (en nombre de cases)
 	
-	// Caractéristiques des planètes
-	public static final int PlaneteTailleMin = 10; // taille minimale d'une planète
-	public static final int PlaneteTailleMax = 100; // taille maximale d'une planète
+	// Caractï¿½ristiques des planï¿½tes
+	public static final int PlaneteTailleMin = 10; // taille minimale d'une planï¿½te
+	public static final int PlaneteTailleMax = 100; // taille maximale d'une planï¿½te
 	
-	// Caractéristiques des vaisseaux
-	public static final int VaisseauResistanceMin = 1; // résistance minimale d'un vaisseau
-	public static final int VaisseauResistanceMax = 10; // résistance maximale d'un vaisseau
+	// Caracteristiques des equipements
+	// Dommages sur vaisseaux ennemis
+	public static final int DmgVaissMin = 1;
+	public static final int DmgVaissMax = 3;
+	// Dommages sur planete
+	public static final int DmgPlaneteMin = 5;
+	public static final int DmgPlaneteMax = 10;
 	
-	// Caractéristiques des propulsions
-	public static final int PropulsionPorteeMin = 1; // portée minimal d'une propulsion
-	public static final int PropulsionPorteeMax = 5; // portée maximal d'une propulsion
-
-	// Paramètres de la simulation
+	// Caractï¿½ristiques des vaisseaux
+	public static final int VaisseauResistanceMin = 1; // rï¿½sistance minimale d'un vaisseau
+	public static final int VaisseauResistanceMax = 10; // rï¿½sistance maximale d'un vaisseau
+	
+	// Caractï¿½ristiques des propulsions
+	public static final int PropulsionPorteeMin = 1; // portï¿½e minimal d'une propulsion
+	public static final int PropulsionPorteeMax = 5; // portï¿½e maximal d'une propulsion
+	
+	//QuantitÃ© de carburant 
+	public static final int CarburantMin = 10;
+	public static final int CarburantMax = 20;
+	// Paramï¿½tres de la simulation
 	public static final int TourMax = 30; // nombre de tours maximum
-	public static final int TourMs = 2000; // durée d'un tour en millisecondes
+	public static final int TourMs = 2000; // durï¿½e d'un tour en millisecondes
 	
-	// Paramètres d'affichage
+	// Paramï¿½tres d'affichage
 	public static final int GfxCase = 40; // taille des cases en pixel
-	public static final int GfxPlaneteBase = 20; // taille de base des planètes en pixels
-	public static final int GfxPlaneteFacteur = 5; // proportion des planètes relative à leur taille
+	public static final int GfxPlaneteBase = 20; // taille de base des planï¿½tes en pixels
+	public static final int GfxPlaneteFacteur = 5; // proportion des planï¿½tes relative ï¿½ leur taille
 	public static final int GfxVaisseauBase = 5; // taille de base des vaisseaux en pixels
-	public static final int GfxVaisseauFacteur = 1; // proportion des vaisseaux relative à leur résistance
+	public static final int GfxVaisseauFacteur = 1; // proportion des vaisseaux relative ï¿½ leur rï¿½sistance
 }
